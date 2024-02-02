@@ -161,12 +161,24 @@
 
 // Write a function to find the maximum number in an array using a loop and the accumulator pattern.
 
+// function findMaxUsingLoop(arr) {
+//   let maxNum = arr[0];
+//   for (let num of arr) {
+//     if (num > maxNum) maxNum = num;
+//   }
+//   return maxNum;
+// }
+
 // console.log(findMaxUsingLoop([1, 5, 3, 8, 2])); // Output: 8
 // console.log(findMaxUsingLoop([1, 5, 3, 2])); // Output: 5
 
 // ------------------------------------------------------------
 
 // Develop a function to find the minimum number in an array using the .reduce method.
+
+// function findMinUsingReduce(arr) {
+//   return arr.reduce((sum, num) => num < sum ? num : sum, arr[0])
+// }
 
 // console.log(findMinUsingReduce([1, 5, 3, 8, 2])); // Output: 1
 
@@ -176,12 +188,22 @@
 
 // Create a function to find the maximum number in an array using Math.max.
 
+// const findMaxUsingMathMax = arr => Math.max(...arr);
+
 // console.log(findMaxUsingMathMax([1, 5, 3, 8, 2])); // Output: 8
 // console.log(findMaxUsingMathMax([1, 5, 19, 8, 2])); // Output: 19
 
 // ------------------------------------------------------------
 
 // Implement a function to create a new array with all numbers doubled using a for loop and the accumulator pattern.
+
+// function doubleNumbersUsingLoop(arr) {
+//   const doubledNums = [];
+//   for (let num of arr) {
+//     doubledNums.push(num * 2);
+//   }
+//   return doubledNums;
+// }
 
 // console.log(doubleNumbersUsingLoop([1, 2, 3])); // Output: [2, 4, 6]
 // console.log(doubleNumbersUsingLoop([1, 3, 7, 10])); // Output: [2, 6, 14, 20]
@@ -190,12 +212,22 @@
 
 // Write a function to create a new array with all numbers doubled using the .map method.
 
+// const doubleNumbersUsingMap = arr => arr.map(num => num *2);
+
 // console.log(doubleNumbersUsingMap([1, 2, 3])); // Output: [2, 4, 6]
-// console.log(doubleNumbersUsingLoop([1, 3, 7, 10])); // Output: [2, 6, 14, 20]
+// console.log(doubleNumbersUsingMap([1, 3, 7, 10])); // Output: [2, 6, 14, 20]
 
 // ------------------------------------------------------------
 
 // Develop a function to create a new array with only the odd numbers using a for loop and the accumulator pattern.
+
+// function oddNumbersUsingLoop(arr) {
+//   const onlyOdds = [];
+//   for (let num of arr) {
+//     if (num % 2) onlyOdds.push(num);
+//   }
+//   return onlyOdds;
+// }
 
 // console.log(oddNumbersUsingLoop([1, 2, 3])); // Output: [1, 3]
 // console.log(oddNumbersUsingLoop([2, 3, 4, 5, 6, 7])); // Output: [3, 5 ,7]
@@ -204,12 +236,21 @@
 
 // Create a function to create a new array with only the odd numbers using the .filter method.
 
+// const oddNumbersUsingFilter = arr => arr.filter(num => num % 2);
+
 // console.log(oddNumbersUsingFilter([1, 2, 3])); // Output: [1, 3]
-// console.log(oddNumbersUsingLoop([2, 3, 4, 5, 6, 7])); // Output: [3, 5 ,7]
+// console.log(oddNumbersUsingFilter([2, 3, 4, 5, 6, 7])); // Output: [3, 5 ,7]
 
 // ------------------------------------------------------------
 
 // Implement a function to find an element in an array using a for loop and the accumulator pattern. If the element can't be found in the array return an error string
+
+// function findElementUsingLoop(arr, target) {
+//   for (let el of arr) {
+//     if (target === el) return el;
+//   }
+//   return 'ERROR'
+// }
 
 // console.log(findElementUsingLoop([1, 2, 3], 2)); // Output: 2
 // console.log(findElementUsingLoop(["a", "b", "c", "d"], "c")); // Output: "c"
@@ -219,22 +260,37 @@
 
 // Write a function to find an element in an array using the .find method.
 
-// console.log(findElementUsingLoop(["a", "b", "c", "d"], "c")); // Output: "c"
-// console.log(findElementUsingLoop([1, 2, 3, 4 ,5], 6)); // Output: "ERROR"
+// const findElementUsingFind = (arr, target) => arr.find(el => el === target) || 'ERROR';
+
+// console.log(findElementUsingFind(["a", "b", "c", "d"], "c")); // Output: "c"
+// console.log(findElementUsingFind([1, 2, 3, 4 ,5], 6)); // Output: "ERROR"
 
 // ------------------------------------------------------------
 
 // Develop a function to set a key in an object to a value if it doesn't exist, and return the object. If the key exists, return the object as is.
 
+// function setKeyValueInObject(obj, key, val) {
+//   if (obj[key] !== undefined) {
+//     obj[key] = val;
+//     return obj;
+//   }
+//   return obj;
+// }
+
 // console.log(setKeyValueInObject({ key1: 'value1' }, 'key2', 'value2')); 
-// Output: { key1: 'value1', key2: 'value2' }
+// // Output: { key1: 'value1', key2: 'value2' }
 
 // console.log(setKeyValueInObject({ key1: 'value1' }, 'key1', 'value2')); 
-// Output: { key1: 'value1' }
+// // Output: { key1: 'value1' }
 
 // ------------------------------------------------------------
 
 // Create a function to return a new array with only unique elements from an array with duplicate elements.
+
+// function uniqueElementsArray(arr) {
+//   const uniqueElements = [...new Set(arr)];
+//   return uniqueElements;
+// }
 
 // console.log(uniqueElementsArray([1, 2, 2, 3])); // Output: [1, 2, 3]
 // console.log(uniqueElementsArray([1, 2, 2, 3, 3, 4, 3, 2])); // Output: [1, 2, 3, 4]
@@ -243,11 +299,19 @@
 
 // Write a function to return an object with the elements as keys and the count of them as values.
 
+// function elementsCountObject(arr) {
+//   const counter = {};
+//   for (let ele of arr) {
+//     counter[ele] = (counter[ele] || 0) + 1;
+//   }
+//   return counter;
+// }
+
 // console.log(elementsCountObject([1, 2, 2, 3])); 
-// Output: { '1': 1, '2': 2, '3': 1 }
+// // Output: { '1': 1, '2': 2, '3': 1 }
 
 // console.log(elementsCountObject(["a", "b", "b", "a", "c", "d", "a"])); 
-// Output: { a: 3, b: 2, c: 1, d: 1 }
+// // Output: { a: 3, b: 2, c: 1, d: 1 }
 
 // ------------------------------------------------------------
 
