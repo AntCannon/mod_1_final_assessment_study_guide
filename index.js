@@ -317,12 +317,16 @@
 
 // Implement a function to return an array of all the keys in an object.
 
+// const keysArray = obj => Object.keys(obj);
+
 // console.log(keysArray({ key1: 'value1', key2: 'value2' })); 
 // Output: ['key1', 'key2']
 
 // ------------------------------------------------------------
 
 // Develop a function to return an array of all the values in an object.
+
+// const valuesArray = obj => Object.values(obj);
 
 // console.log(valuesArray({ key1: 'value1', key2: 'value2' })); 
 // Output: ['value1', 'value2']
@@ -331,12 +335,16 @@
 
 // Write a function to round up a decimal number.
 
+// const roundUpDecimal = num => Math.ceil(num);
+
 // console.log(roundUpDecimal(3.14)); // Output: 4
 // console.log(roundUpDecimal(5.74)); // Output: 6
 
 // ------------------------------------------------------------
 
 // Implement a function to round down a decimal number.
+
+// const roundDownDecimal = num => Math.floor(num);
 
 // console.log(roundDownDecimal(3.14)); // Output: 3
 // console.log(roundDownDecimal(5.74)); // Output: 5
@@ -345,12 +353,16 @@
 
 // Develop a function to return the sum of all numbers in an array using the .reduce method.
 
+// const sumArrayReduce = arr => arr.reduce((sum, num) => sum + num);
+
 // console.log(sumArrayReduce([1, 2, 3, 4])); // Output: 10
 // console.log(sumArrayReduce([1, 2, 3, 4, 5])); // Output: 15
 
 // ------------------------------------------------------------
 
 // Create a function to return the product of all numbers in an array using the .reduce method.
+
+// const productArrayReduce = arr => arr.reduce((prod, num) => prod * num, 1);
 
 // console.log(productArrayReduce([1, 2, 3, 4])); // Output: 24
 // console.log(productArrayReduce([1, 2, 3, 4, 5])); // Output: 120
@@ -359,13 +371,21 @@
 
 // Implement a function to calculate the average of numbers in an array.
 
+// const averageArray = arr => arr.reduce((sum, num) => sum + num)/arr.length;
 // console.log(averageArray([1, 2, 3, 4])); // Output: 2.5
 // console.log(averageArray([1, 2, 3, 4, 5])); // Output: 3
 
 // ------------------------------------------------------------
 
 // Write a function to calculate the factorial of a given number.
-
+// function factorial(n) {
+//   let prod = 1;
+//   while (n > 0) {
+//     prod *= n;
+//     n--
+//   }
+//   return prod;
+// }
 // console.log(factorial(5)); // Output: 120
 // console.log(factorial(6)); // Output: 720
 
@@ -373,12 +393,20 @@
 
 // Develop a function to return the reverse of a given string.
 
+// function reverseString(s) {
+//   let revS = '';
+//   for (let i = s.length - 1 ; i >= 0; i--) revS += s[i];
+//   return revS;
+// }
+
 // console.log(reverseString("hello")); // Output: 'olleh'
 // console.log(reverseString("hello world")); // Output: 'dlrow olleh'
 
 // ------------------------------------------------------------
 
 // Develop a function to convert a temperature from Celsius to Fahrenheit.
+
+// const celsiusToFahrenheit = c => c * 9/5 + 32;
 
 // console.log(celsiusToFahrenheit(25)); // Output: 77
 // console.log(celsiusToFahrenheit(31)); // Output: 87.8
