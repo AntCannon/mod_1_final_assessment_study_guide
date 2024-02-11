@@ -307,6 +307,10 @@
 //   return counter;
 // }
 
+// function elementsCountObject(arr) {
+//  return arr.reduce((obj, el) => obj, {})
+// }
+
 // console.log(elementsCountObject([1, 2, 2, 3])); 
 // // Output: { '1': 1, '2': 2, '3': 1 }
 
